@@ -1,33 +1,31 @@
 public class HomeWork4Task5 {
-
     public static void main(final String[] args) {
 
+        int counter = 0;
         int hr = 0;
         int min = 0;
-//        int counter = 0;
+        int hr1 = 0;
+        int hr2 = 0;
+        int min1 = 0;
+        int min2 = 0;
+
 
         for (hr = 0; hr < 24; hr++) {
-            for (min = 0; min < 60; min++) {
-                System.out.print(" " + hr + ":" + min);
-                if (min == 60) {
-                    hr++;
+            for (hr = 0; hr < 24; hr++) {
+                for (min = 0; min < 60; min++) {
+                    if (min == 60) {
+                        hr++;
+                    }
+                    hr1 = hr / 10;
+                    hr2 = hr % 10;
+                    min1 = min / 10;
+                    min2 = min % 10;
+                    if (hr1 == min2 && hr2 == min1) {
+                        counter += 1;
+                    }
                 }
             }
         }
+        System.out.println("The number of symmetries is " + counter);
     }
-
-
-//        for (hr = 0; hr < 24; hr++) {
-//            for (min = 0; min < 60; min++) {
-//                if (min / 10 == hr % 10 && min % 10 == hr / 10) {
-//                    counter += 1;
-//                    min += 1;
-//                    if (min == 59) {
-//                        hr += 1;
-//                    }
-//                }
-//            }
-//
-//        }
-
 }

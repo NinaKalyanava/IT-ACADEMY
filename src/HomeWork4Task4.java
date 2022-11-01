@@ -2,12 +2,20 @@ public class HomeWork4Task4 {
 
     public static void main(final String[] args) {
 
-        int counter = 1;
-        int amount = 99999;
+        int counter = 0;
 
-        int counter4 = 1*10000+9*1000+81*100+81*9*10+1;
-        int counter13 = 1000+100*10+10*100+1;
-                counter = counter4 + counter13;
-            System.out.println("The number is " + counter );
+        for (int i = 0; i < 99999; i++) {
+            int n = i;
+            while (n > 0) {
+                if (n % 10 == 4 || ((n / 10) % 10 == 1) && n % 10 == 3) {
+                    counter++;
+                    break;
+                }
+                n /= 10;
+            }
+        }
+
+        System.out.println("Amount of numbers: " + counter);
+//              }
     }
 }
