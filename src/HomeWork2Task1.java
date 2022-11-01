@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Homework2E1 {
+public class HomeWork2Task1 {
 
     public static void main(final String[] args) {
         Scanner scanner = new Scanner(System.in);

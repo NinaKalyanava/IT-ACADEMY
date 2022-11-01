@@ -16,6 +16,5 @@ public class HomeWork4Task4 {
         }
 
         System.out.println("Amount of numbers: " + counter);
-//              }
     }
 }
