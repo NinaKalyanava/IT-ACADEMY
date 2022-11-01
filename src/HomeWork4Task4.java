@@ -14,7 +14,6 @@ public class HomeWork4Task4 {
                 n /= 10;
             }
         }
-
         System.out.println("Amount of numbers: " + counter);
     }
 }
