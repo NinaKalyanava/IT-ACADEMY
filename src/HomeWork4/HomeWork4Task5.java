@@ -13,18 +13,13 @@ public class HomeWork4Task5 {
 
 
         for (hr = 0; hr < 24; hr++) {
-            for (hr = 0; hr < 24; hr++) {
-                for (min = 0; min < 60; min++) {
-                    if (min == 60) {
-                        hr++;
-                    }
-                    hr1 = hr / 10;
-                    hr2 = hr % 10;
-                    min1 = min / 10;
-                    min2 = min % 10;
-                    if (hr1 == min2 && hr2 == min1) {
-                        counter += 1;
-                    }
+            for (min = 0; min < 60; min++) {
+                hr1 = hr / 10;
+                hr2 = hr % 10;
+                min1 = min / 10;
+                min2 = min % 10;
+                if (hr1 == min2 && hr2 == min1) {
+                    counter += 1;
                 }
             }
         }

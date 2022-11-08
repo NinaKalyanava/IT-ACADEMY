@@ -21,16 +21,16 @@ public class HomeWork3Task1 {
                 System.out.println("The average number is " + b);
             } else if (b < c && a > c) {
                 System.out.println("The average number is " + c);
-            } else {
+            } else if (b < c && c > a) {
                 System.out.println("The average number is " + a);
             }
         } else {
-            if (b > c && c < a) {
+            if (a > c) {
                 System.out.println("The average number is " + a);
-            } else if (b < c && a < c) {
+            } else if (a < c && b > c) {
                 System.out.println("The average number is " + c);
-            } else {
-                System.out.println("The average number is " + c);
+            } else if (a < c && b < c) {
+                System.out.println("The average number is " + b);
             }
         }
         scanner.close();

@@ -18,6 +18,10 @@ public class HomeWork3Task5 {
 
         if (day == 28 && month == 2 && year % 4 == 0) {
             System.out.println("29 Feb " + year);
+        } else if (day == 29 && month == 2 && year % 4 == 0) {
+            System.out.println("1 Mar " + year);
+        } else if (day == 29 && month == 2 && year % 4 != 0) {
+            System.out.println("29 Feb didn't exist this year");
         } else if (day == 31 && month == 12) {
             year += 1;
             System.out.println("1 Jan " + year);
@@ -42,7 +46,7 @@ public class HomeWork3Task5 {
         } else if (day == 31 && month == 10) {
             System.out.println("1 Nov " + year);
         } else if (day == 30 && month == 11) {
-            System.out.println("1 Des " + year);
+            System.out.println("1 Dec " + year);
         } else {
             day += 1;
             switch (month) {
@@ -80,7 +84,7 @@ public class HomeWork3Task5 {
                     System.out.println(day + " Nov " + year);
                     break;
                 case 12:
-                    System.out.println(day + " Des " + year);
+                    System.out.println(day + " Dec " + year);
                     break;
             }
         }
