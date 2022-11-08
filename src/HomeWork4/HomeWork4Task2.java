@@ -11,6 +11,5 @@ public class HomeWork4Task2 {
             star += "*";
             System.out.println(star);
         }
-        star += star;
     }
 }
