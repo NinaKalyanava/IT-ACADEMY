@@ -6,23 +6,22 @@ public class HomeWork5Task3 {
         int[] array2 = {3, 7, 8, 12, 20};
 
         int[] newArray = new int[array1.length + array2.length];
-        int index3 = newArray[0];
+        int indexOfNewArray = 0;
 
-        for (int index1 = 0; index1 < array1.length; index1++) {
-            for (int index2 = 0; index2 < array2.length; ) {
-                if (array1[index1] < array2[index2]) {
-                    newArray[index3] = array1[index1];
-                    index1++;
-                } else if (array1[index1] > array2[index2]) {
-                    newArray[index3] = array2[index2];
-                    newArray[index3 + 1] = array1[index1];
-                    index2++;
-                }
-                index3++;
+        for (int indexOfFirstArray = 0, indexOfSecondArray = 0; indexOfSecondArray < array2.length && indexOfFirstArray<array1.length; ) {
+            if (array1[indexOfFirstArray] < array2[indexOfSecondArray]) {
+                newArray[indexOfNewArray] = array1[indexOfFirstArray];
+                indexOfFirstArray++;
+            } else {
+                newArray[indexOfNewArray] = array2[indexOfSecondArray];
+                newArray[indexOfNewArray + 1] = array1[indexOfFirstArray];
+                indexOfSecondArray++;
             }
-            for (int newIndex = 0; newIndex < 10; newIndex++) {
-                System.out.print(newArray[newIndex] + " ");
-            }
+            indexOfNewArray++;
+        }
+
+        for (int newIndex = 0; newIndex < 10; newIndex++) {
+            System.out.print(newArray[newIndex] + " ");
         }
     }
 }
