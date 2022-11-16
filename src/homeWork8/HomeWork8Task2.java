@@ -16,7 +16,7 @@ public class HomeWork8Task2 {
         while (str.endsWith(" ")) {
             str = str.substring(0, str.length() - 1);
         }
-        str = str.replaceAll("\\s+", " ");
+        str = str.replaceAll("\\s+", "\s");
         System.out.println("Normalized string: " + str);
 
         scanner.close();
