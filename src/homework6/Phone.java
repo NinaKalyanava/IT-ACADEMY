@@ -1,4 +1,4 @@
-package homeWork7;
+package homework7;
 
 public class Phone {
     int number;

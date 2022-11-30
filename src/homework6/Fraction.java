@@ -1,4 +1,4 @@
-package homeWork7;
+package homework7;
 
 public class Fraction {
     int numerator;
