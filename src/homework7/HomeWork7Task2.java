@@ -1,8 +1,6 @@
-package homeWork8;
+package homework7;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class HomeWork8Task2 {
     public static void main(String[] args) {
