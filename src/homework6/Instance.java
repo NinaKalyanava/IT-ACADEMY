@@ -1,4 +1,4 @@
-package homework7;
+package homework6;
 
 public class Instance {
     public static void main(String[] args) {

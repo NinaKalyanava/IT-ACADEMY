@@ -1,4 +1,4 @@
-package Lesson7;
+package lesson7;
 
 public class House {
     int length;

@@ -3,7 +3,7 @@ package homework7;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class HomeWork8Task3 {
+public class HomeWork7Task3 {
     public static void main(String[] args) {
         String str = "Listen to the news from today, read the text at the same time! Listen to the news from today - without reading the text.";
         Pattern pattern = Pattern.compile("\\p{Punct}");
