@@ -19,7 +19,7 @@ class Man {
     Man() {
     }
 
-    public String getName() {
+    public String getName1() {
         return name;
     }
 
