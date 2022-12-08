@@ -22,6 +22,7 @@ public class HomeWork8Task2 {
 }
 
 class Flower {
+
     private String name;
     private double price;
     private String color;
@@ -102,6 +103,9 @@ class Bouquet {
     private final Flower[] flowers;
 
     private int currentElement;
+    double price = 0;
+    String colors = "";
+    int lifespan = 0;
 
     public Bouquet(final int numberOfFlowers) {
         this.flowers = new Flower[numberOfFlowers];
@@ -117,7 +121,6 @@ class Bouquet {
         return true;
     }
 
-    double price = 0;
 
     public double bouquetPrice() {
         for (int i = 0; i < flowers.length; i++) {
@@ -126,7 +129,6 @@ class Bouquet {
         return price;
     }
 
-    String colors = "";
 
     public String bouquetColors() {
         for (int y = 0; y < flowers.length; y++) {
@@ -135,7 +137,6 @@ class Bouquet {
         return colors;
     }
 
-    int lifespan = 0;
 
     public int bouquetLifespan() {
         for (int j = 0; j < flowers.length; j++) {
