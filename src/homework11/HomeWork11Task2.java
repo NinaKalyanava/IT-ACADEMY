@@ -24,7 +24,6 @@ interface Division {
             String errorMessage = String.format("Failed to divide [%s] / [%s]", a, b);
             throw new InputException(errorMessage, ex);
         }
-
     }
 }
 
