@@ -2,14 +2,15 @@ package homework9;
 
 public class HomeWork9Task1 {
     public static void main(String[] args) {
-
         Pair<Integer> pair1 = new Pair<>(10, 15);
         System.out.println("The first value is: " + pair1.first());
         System.out.println("The second value is: " + pair1.last());
-        System.out.println("New pare is: " + pair1.swap());
-        System.out.println("After replacing the first element new pare is: " + pair1.replaceFirst(20));
-        System.out.println("After replacing the second element new pare is: " + pair1.replaceSecond(30));
-
+        pair1.swap();
+        System.out.println("New pare is: " + pair1.getFirstValue() + " and " + pair1.getSecondValue());
+        pair1.replaceFirst(20);
+        System.out.println("After replacing the first element new pare is: " + pair1.getFirstValue() + " and " + pair1.getSecondValue());
+        pair1.replaceSecond(30);
+        System.out.println("After replacing the second element new pare is: " + pair1.getFirstValue() + " and " + pair1.getSecondValue());
     }
 }
 
@@ -39,23 +40,19 @@ class Pair<T> {
         return secondValue;
     }
 
-    public T swap() {
-        T x = firstValue;
-        firstValue = secondValue;
-        secondValue = x;
-        return (T) (firstValue + ", " + secondValue);
+    public void swap() {
+        T x = this.firstValue;
+        this.firstValue = this.secondValue;
+        this.secondValue = x;
     }
 
-    public T replaceFirst(T newFirstValue) {
-        firstValue = newFirstValue;
-        return (T) (newFirstValue + ", " + secondValue);
+    public void replaceFirst(T newFirstValue) {
+        this.firstValue = newFirstValue;
     }
 
-    public T replaceSecond(T newSecondValue) {
-        secondValue = newSecondValue;
-        return (T) (firstValue + ", " + newSecondValue);
+    public void replaceSecond(T newSecondValue) {
+        this.secondValue = newSecondValue;
     }
-
 }
 
 

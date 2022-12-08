@@ -1,49 +1,63 @@
 package homework9;
 
-import java.util.NoSuchElementException;
+import java.util.Random;
 
 public class HomeWork9Task2 {
     public static void main(String[] args) {
+        Integer[][] array = new Integer[5][5];
 
+        Random random = new Random();
+        for (int rowIndex = 0; rowIndex < array.length; rowIndex++) {
+            for (int columnIndex = 0; columnIndex < array.length; columnIndex++) {
+                int randomInt = random.nextInt(10);
+                array[rowIndex][columnIndex] = randomInt;
+                System.out.print(randomInt + " ");
+            }
+            System.out.println();
+        }
+
+        ArrayIterator<Integer> arrayIterator = new ArrayIterator<>(array);
+
+        while (arrayIterator.hasNext()) {
+            System.out.print(arrayIterator.next() + "\s");
+        }
     }
 }
 
-class Iterator<T> {
+interface Iterator<T> {
+    T next();
 
-    private T[][] array;
+    boolean hasNext();
+}
 
-    public Iterator(T[][] array) {
+class ArrayIterator<T> implements Iterator<T> {
+
+    final private T[][] array;
+    private int row;
+    private int col;
+
+    public ArrayIterator(T[][] array) {
         this.array = array;
     }
 
     public T[][] getArray() {
-
         return array;
     }
 
-    private int i, j;
-
+    @Override
     public boolean hasNext() {
-        for (int i = this.i; i < array.length; i++) {
-            for (int j = this.j; j < array[i].length; j++) {
-                return true;
-            }
-        }
-        return false;
+        return row < array.length && col < array[row].length;
     }
 
+    @Override
     public T next() {
-        if (!hasNext())
-            throw new NoSuchElementException();
-        T t = array[i][j];
-        j++;
-        for (int i = this.i; i < array.length; i++) {
-            for (int j = (i == this.i ? this.j : 0); j < array[i].length; j++) {
-                this.i = i;
-                this.j = j;
-                return t;
-            }
+        T element = array[row][col];
+        if (col < array[row].length-1) {
+            col++;
+        } else {
+            col = 0;
+            row++;
         }
-        return t;
+        return element;
     }
 }
