@@ -101,11 +101,7 @@ class Chamomile extends Flower {
 class Bouquet {
 
     private final Flower[] flowers;
-
     private int currentElement;
-    double price = 0;
-    String colors = "";
-    int lifespan = 0;
 
     public Bouquet(final int numberOfFlowers) {
         this.flowers = new Flower[numberOfFlowers];
@@ -123,6 +119,7 @@ class Bouquet {
 
 
     public double bouquetPrice() {
+        double price = 0;
         for (int i = 0; i < flowers.length; i++) {
             price += flowers[i].getPrice();
         }
@@ -131,6 +128,7 @@ class Bouquet {
 
 
     public String bouquetColors() {
+        String colors = "";
         for (int y = 0; y < flowers.length; y++) {
             colors += flowers[y].getColor() + "\s";
         }
@@ -139,6 +137,7 @@ class Bouquet {
 
 
     public int bouquetLifespan() {
+        int lifespan = 0;
         for (int j = 0; j < flowers.length; j++) {
             if (flowers[j].getLifespan() > lifespan) {
                 lifespan = flowers[j].getLifespan();
