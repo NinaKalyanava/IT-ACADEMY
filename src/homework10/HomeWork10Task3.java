@@ -74,12 +74,12 @@ class User implements Comparable<User> {
 
     @Override
     public int compareTo(final User userToCompare) {
-        if (this.firstName == userToCompare.firstName) {
-            return 0;
-        } else if (this.lastName.hashCode() > userToCompare.lastName.hashCode()) {
-            return 1;
+        int result = this.firstName.compareTo(userToCompare.firstName);
+        if (result == 0) {
+            result = this.lastName.compareTo(userToCompare.lastName);
         }
-        return -1;
+        return result;
     }
+
 }
 
